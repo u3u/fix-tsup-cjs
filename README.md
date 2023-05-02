@@ -14,7 +14,7 @@ The default export statement in the `commonjs` format output by [tsup](https://g
 tsup && npx fix-tsup-cjs
 ```
 
-> Note: By default, `dist/**/*.js` will be fixed. If the `type` in your `package.json` is set to `module`, then `dist/**/*.cjs` will be fixed.
+> _Note: By default, `dist/**/*.js` will be fixed. If the `type` in your `package.json` is set to `module`, then `dist/**/*.cjs` will be fixed._
 
 ## CLI Options
 
