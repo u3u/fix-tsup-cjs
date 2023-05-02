@@ -29,10 +29,11 @@ For more info, run any command with the `--help` flag:
   $ fix-tsup-cjs --help
 
 Options:
-  --cwd [path]   Set fix directory (default: dist)
-  --dts          Fix commonjs d.ts files (default: true)
-  -v, --version  Display version number
-  -h, --help     Display this message
+  --cwd [path]             Set fix directory (default: dist)
+  --dts                    Fix commonjs d.ts files (default: true)
+  -i, --ignore [...files]  Ignore files
+  -v, --version            Display version number
+  -h, --help               Display this message
 ```
 
 ## License

@@ -18,12 +18,14 @@ export const reflect = async (options: ReflectOptions) => {
   const files = await fg(options.files, {
     cwd: path.resolve(cwd, 'dist'),
     ...globOptions,
-    ignore: ['node_modules'],
+    ignore: [...(globOptions.ignore || []), 'node_modules'],
     absolute: true,
   })
 
+  const logger = (message: string) => console.log(`[${name}]`, message)
+
   if (!files.length) {
-    console.log(`[${name}]`, gray('No files matched'))
+    logger(gray('No files matched'))
   }
 
   for (const file of files) {
@@ -33,9 +35,9 @@ export const reflect = async (options: ReflectOptions) => {
 
     if (result) {
       await fs.writeFile(file, result)
-      console.log(`[${name}]`, `${green('✔')} ${filename}`)
+      logger(`${green('✔')} ${filename}`)
     } else {
-      console.log(`[${name}]`, gray(`skip ${filename}`))
+      logger(gray(`skip ${filename}`))
     }
   }
 }
