@@ -1,7 +1,7 @@
 {
   "name": "fix-tsup-cjs",
   "version": "0.0.0",
-  "description": "Fix tsup output commonjs default export & type definition",
+  "description": "Fix the commonjs default export statement and type definition of tsup output",
   "keywords": [
     "tsup",
     "cjs",

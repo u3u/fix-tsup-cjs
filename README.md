@@ -1,6 +1,6 @@
 # fix-tsup-cjs
 
-> Fix [tsup](https://github.com/egoist/tsup) output `commonjs` default export & type definition
+> Fix the `commonjs` default export statement and type definition of [tsup](https://github.com/egoist/tsup) output
 
 [![npm version](https://badgen.net/npm/v/fix-tsup-cjs)](https://npm.im/fix-tsup-cjs) [![npm downloads](https://badgen.net/npm/dm/fix-tsup-cjs)](https://npm.im/fix-tsup-cjs)
 
