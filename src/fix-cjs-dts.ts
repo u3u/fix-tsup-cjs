@@ -13,7 +13,7 @@ export const fixCjsDts = async (options?: Partial<ReflectOptions>) => {
       if (result?.groups?.name) {
         const statement = `export = ${result.groups.name}`
 
-        if (!code.includes(statement)) {
+        if (!code.endsWith(statement)) {
           return code + statement
         }
       }

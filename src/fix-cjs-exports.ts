@@ -21,7 +21,7 @@ export const fixCjsExports = async (options?: Partial<ReflectOptions>) => {
     files,
     name: 'fix-cjs-exports',
     reflect: (code) => {
-      if (code.includes('module.exports =') && !code.includes(statement)) {
+      if (code.includes('module.exports = __toCommonJS') && !code.endsWith(statement)) {
         return code + statement
       }
     },
