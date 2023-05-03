@@ -18,8 +18,8 @@ export const reflect = async (options: ReflectOptions) => {
   const files = await fg(options.files, {
     cwd: path.resolve(cwd, 'dist'),
     ...globOptions,
-    ignore: [...(globOptions.ignore || []), 'node_modules'],
     absolute: true,
+    ignore: [...(globOptions.ignore || []), 'node_modules'],
   })
 
   const logger = (message: string) => console.log(`[${name}]`, message)
