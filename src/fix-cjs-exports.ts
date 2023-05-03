@@ -1,6 +1,13 @@
 import { reflect, type ReflectOptions } from './reflect'
 
-const statement = 'module.exports = module.exports.default;'
+const statement = `
+// fix-cjs-exports
+if (module.exports.default) {
+  Object.assign(module.exports.default, module.exports);
+  module.exports = module.exports.default;
+  delete module.exports.default;
+}
+`
 
 export const fixCjsExports = async (options?: Partial<ReflectOptions>) => {
   const { readPackage } = await import('read-pkg')
