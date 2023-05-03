@@ -1,6 +1,6 @@
 import { reflect, type ReflectOptions } from './reflect'
 
-const exportRegex = /export { (?<name>.+) as default };/
+const exportRegex = /export {\s*.*\b(?<name>.+) as default.*\s*};/
 
 export const fixCjsDts = async (options?: Partial<ReflectOptions>) => {
   await reflect({
