@@ -24,6 +24,7 @@ cli
 
     await fixCjsExports({
       files,
+
       globOptions: {
         cwd: hasCustomMatchFiles ? currentDir : cwd,
         ignore,

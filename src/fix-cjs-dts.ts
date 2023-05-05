@@ -7,6 +7,7 @@ export const fixCjsDts = async (options?: Partial<ReflectOptions>) => {
     files: '**/*.d.ts',
     ...options,
     name: 'fix-cjs-dts',
+
     reflect: (code) => {
       const result = code.match(exportRegex)
 
