@@ -1,5 +1,5 @@
 export const toArray = <T>(val?: T): T[] => {
-  if (!val) return []
+  if (!val) return [];
 
-  return Array.isArray(val) ? val : [val]
-}
+  return Array.isArray(val) ? val : [val];
+};
