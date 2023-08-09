@@ -1,6 +1,6 @@
 import { reflect, type ReflectOptions } from './reflect';
 
-const statement = `
+const statements = `
 // fix-cjs-exports
 if (module.exports.default) {
   Object.assign(module.exports.default, module.exports);
@@ -16,13 +16,16 @@ export const fixCjsExports = async (options?: Partial<ReflectOptions>) => {
   const suffix = isEsm ? 'cjs' : 'js';
   const files = options?.files?.length ? options.files : `**/*.${suffix}`;
 
-  await reflect({
+  return reflect({
     ...options,
     files,
     name: 'fix-cjs-exports',
 
     reflect: (code) => {
-      if (code.includes('module.exports = __toCommonJS') && !code.endsWith(statement)) return code + statement;
+      // eslint-disable-next-line curly
+      if (code.includes('module.exports = __toCommonJS') && !code.endsWith(statements)) {
+        return code + statements;
+      }
     },
   });
 };

@@ -27,6 +27,8 @@ export const reflect = async (options: ReflectOptions) => {
 
   if (!files.length) logger(gray('No files matched'));
 
+  const output = [];
+
   for (const file of files) {
     const code = await fs.readFile(file, 'utf8');
     const result = await reflect(code);
@@ -34,9 +36,12 @@ export const reflect = async (options: ReflectOptions) => {
 
     if (result) {
       await fs.writeFile(file, result);
+      output.push(result);
       logger(`${green('✔')} ${filename}`);
     } else {
       logger(gray(`skip ${filename}`));
     }
   }
+
+  return output;
 };

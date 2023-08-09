@@ -1,9 +1,9 @@
 import { reflect, type ReflectOptions } from './reflect';
 
-const exportRegex = /export {\s*.*\b(?<name>.+) as default.*\s*};/u;
+const exportRegex = /export \{\s*(?:\S.*)?\b(?<name>.+) as default.*(?:[\n\r\u{2028}\u{2029}]\s*)?\};/u;
 
 export const fixCjsDts = async (options?: Partial<ReflectOptions>) => {
-  await reflect({
+  return reflect({
     files: '**/*.d.{ts,cts}',
     ...options,
     name: 'fix-cjs-dts',
