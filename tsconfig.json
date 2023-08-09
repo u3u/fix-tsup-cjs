@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
-    "module": "es2022",
-    "resolveJsonModule": true
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "strict": true
   },
+
   "extends": "@tsconfig/node18/tsconfig.json"
 }
