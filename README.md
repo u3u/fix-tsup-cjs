@@ -2,7 +2,7 @@
 
 > Fix the `commonjs` default export statement and type definition of [tsup](https://github.com/egoist/tsup) output
 
-[![npm version](https://badgen.net/npm/v/fix-tsup-cjs)](https://npm.im/fix-tsup-cjs) [![npm downloads](https://badgen.net/npm/dm/fix-tsup-cjs)](https://npm.im/fix-tsup-cjs)
+[![npm version](https://badgen.net/npm/v/fix-tsup-cjs)](https://npm.im/fix-tsup-cjs) [![npm downloads](https://badgen.net/npm/dm/fix-tsup-cjs)](https://npm.im/fix-tsup-cjs) [![codecov](https://codecov.io/gh/u3u/fix-tsup-cjs/graph/badge.svg)](https://codecov.io/gh/u3u/fix-tsup-cjs)
 
 ## Motivation
 
