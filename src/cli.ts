@@ -15,8 +15,9 @@ cli
   .option('--cwd [path]', 'Set fix directory', { default: 'dist' })
   .option('--dts', 'Fix commonjs d.ts and d.cts files', { default: true })
   .option('-i, --ignore [...files]', 'Ignore files')
+  .option('--silent', 'Suppress logs')
   .action(async (files, options) => {
-    const { dts } = options;
+    const { dts, silent } = options;
     const hasCustomMatchFiles = !!files?.length;
     const currentDir = process.cwd();
     const cwd = path.resolve(currentDir, options.cwd);
@@ -29,6 +30,8 @@ cli
         cwd: hasCustomMatchFiles ? currentDir : cwd,
         ignore,
       },
+
+      silent,
     });
 
     if (dts) {
@@ -37,6 +40,8 @@ cli
           cwd,
           ignore,
         },
+
+        silent,
       });
     }
   });

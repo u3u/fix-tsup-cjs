@@ -30,8 +30,9 @@ For more info, run any command with the `--help` flag:
 
 Options:
   --cwd [path]             Set fix directory (default: dist)
-  --dts                    Fix commonjs d.ts files (default: true)
+  --dts                    Fix commonjs d.ts and d.cts files (default: true)
   -i, --ignore [...files]  Ignore files
+  --silent                 Suppress logs
   -v, --version            Display version number
   -h, --help               Display this message
 ```

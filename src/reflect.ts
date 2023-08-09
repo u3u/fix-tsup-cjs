@@ -10,10 +10,11 @@ export interface ReflectOptions {
   globOptions?: fg.Options;
   name?: string;
   reflect(code: string): Promise<ReflectActionResult> | ReflectActionResult;
+  silent?: boolean;
 }
 
 export const reflect = async (options: ReflectOptions) => {
-  const { globOptions = {}, name = 'reflect', reflect } = options;
+  const { globOptions = {}, name = 'reflect', reflect, silent } = options;
   const cwd = process.cwd();
 
   const files = await fg(options.files, {
@@ -23,7 +24,9 @@ export const reflect = async (options: ReflectOptions) => {
     ignore: [...(globOptions.ignore || []), 'node_modules'],
   });
 
-  const logger = (message: string) => console.log(`[${name}]`, message);
+  const logger = (message: string) => {
+    if (!silent) console.log(`[${name}]`, message);
+  };
 
   if (!files.length) logger(gray('No files matched'));
 
