@@ -13,7 +13,7 @@ cli.version(version);
 cli
   .command('[...files]', 'Custom matching files glob')
   .option('--cwd [path]', 'Set fix directory', { default: 'dist' })
-  .option('--dts', 'Fix commonjs d.ts files', { default: true })
+  .option('--dts', 'Fix commonjs d.ts and d.cts files', { default: true })
   .option('-i, --ignore [...files]', 'Ignore files')
   .action(async (files, options) => {
     const { dts } = options;

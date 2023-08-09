@@ -4,7 +4,7 @@ const exportRegex = /export {\s*.*\b(?<name>.+) as default.*\s*};/u;
 
 export const fixCjsDts = async (options?: Partial<ReflectOptions>) => {
   await reflect({
-    files: '**/*.d.ts',
+    files: '**/*.d.{ts,cts}',
     ...options,
     name: 'fix-cjs-dts',
 
