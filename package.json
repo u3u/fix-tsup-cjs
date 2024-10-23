@@ -60,28 +60,28 @@
   },
   "dependencies": {
     "cac": "^6.7.14",
-    "fast-glob": "^3.3.1",
+    "fast-glob": "^3.3.2",
     "kolorist": "^1.8.0",
-    "read-pkg": "^8.0.0"
+    "read-pkg": "^8.1.0"
   },
   "devDependencies": {
-    "@tsconfig/node18": "^18.2.0",
-    "@types/node": "^18.17.4",
-    "@u3u/eslint-config": "^2.9.1",
-    "@u3u/prettier-config": "^3.0.1",
-    "@vitest/coverage-v8": "^0.34.1",
-    "@vitest/ui": "^0.34.1",
-    "eslint": "^8.46.0",
+    "@tsconfig/node18": "^18.2.4",
+    "@types/node": "^18.19.59",
+    "@u3u/eslint-config": "^2.15.2",
+    "@u3u/prettier-config": "^3.1.0",
+    "@vitest/coverage-v8": "^0.34.6",
+    "@vitest/ui": "^0.34.7",
+    "eslint": "^8.57.1",
     "execa": "^7.2.0",
     "fix-tsup-cjs": "link:",
-    "lint-staged": "^13.2.3",
+    "lint-staged": "^13.3.0",
     "prettier": "^2.8.8",
-    "simple-git-hooks": "^2.9.0",
+    "simple-git-hooks": "^2.11.1",
     "tsup": "^7.2.0",
-    "typescript": "^5.1.6",
-    "vitest": "^0.34.1"
+    "typescript": "^5.6.3",
+    "vitest": "^0.34.6"
   },
-  "packageManager": "pnpm@8.6.12",
+  "packageManager": "pnpm@8.15.9",
   "publishConfig": {
     "access": "public"
   }
